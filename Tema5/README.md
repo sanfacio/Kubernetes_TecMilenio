@@ -6,31 +6,43 @@
 
 --- 
 
+El presente documento muestra los pasos a seguir para:
+
+1. Revisar la instalación local de kubectl
+2. Instalar AWS CLI en Ubuntu
+3. Configurar la cuenta de AWS en Ubuntu
+
+--- 
+
 *NO ejecutar esta parte*
-`minikube start`
-`alias kubectl="minikube kubectl --"`
+
+> minikube start
+> alias kubectl="minikube kubectl --"
 
 *Verificar la versión instalada de kubectl*
-`kubectl version --client`
+> kubectl version --client
 
-// To install the AWS CLI, run the following commands.
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
+###### Ejecuta los siguientes comandos para instalar el AWS CLI en Ubuntu
+> curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+> unzip awscliv2.zip
+> sudo ./aws/install
 
-aws configure
+###### Configura tu cuenta de AWS para añadir las credenciales 
+> aws configure
 
-// Para instalar o actualizar kubectl en Linux (amd64)
 
-curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.2/2024-07-12/bin/linux/amd64/kubectl
-curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.2/2024-07-12/bin/linux/amd64/kubectl.sha256
-sha256sum -c kubectl.sha256
-openssl sha1 -sha256 kubectl
-chmod +x ./kubectl
-mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
-echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+###### Para instalar o actualizar kubectl en Linux (amd64)
 
-kubectl version --client
+> curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.2/2024-07-12/bin/linux/amd64/kubectl
+> curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.30.2/2024-07-12/bin/linux/amd64/kubectl.sha256
+> sha256sum -c kubectl.sha256
+> openssl sha1 -sha256 kubectl
+> chmod +x ./kubectl
+> mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
+> echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+
+###### Validar la versión del cliente de kubectl
+> kubectl version --client
 
 
 
