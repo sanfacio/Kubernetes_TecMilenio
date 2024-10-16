@@ -1,13 +1,16 @@
 {
-    "name": "mi-aplicacion",
-    "version": "1.0.0",
-    "main": "app.js",
-    "scripts": {
-      "test": "jest"
-    },
-    "dependencies": {},
-    "devDependencies": {
-      "jest": "^29.0.0"
-    }
-  }
-  
+  "name": "sum-app",
+  "version": "1.0.0",
+  "description": "Simple app to sum two numbers",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "jest": "^29.7.0"
+  },
+  "author": "Santos Facio"
+}
