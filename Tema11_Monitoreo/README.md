@@ -185,7 +185,8 @@ Una vez que la aplicación esté corriendo, puedes ver las métricas en *Prometh
 
     
     - Para Flask: `http://localhost:5000`
-    - Para Node.js: `http://localhost:3000`
+    - Para Node.js: `http://localhost:3100`
+    - Para mensajes en Flask: `http://localhost:5100/messages`
 
 2. Visualizar los logs de la aplicación en el contenedor
 
