@@ -190,8 +190,9 @@ Una vez que la aplicación esté corriendo, puedes ver las métricas en *Prometh
 
 2. Visualizar los logs de la aplicación en el contenedor
 
-		docker logs flask-app   # Para la aplicación Flask
-		docker logs node-app    # Para la aplicación Node.js
+		docker logs flask-app   	# Para la aplicación Flask
+		docker logs node-app    	# Para la aplicación Node.js
+		docker logs flask-message-app 	# Para la aplicación Flask de mensajes
 
 ---
 #### Referencias
